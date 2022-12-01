@@ -21,18 +21,6 @@
 				z-index:0;
 			}
 
-			.ireland .background {
-				background-image: url(ireland.svg);
-			}
-
-			.scotland .background {
-				background-image: url(scotland.svg);
-			}
-
-			.wales .background {
-				background-image: url(wales.svg);
-			}
-
 			.mascotbox {
 				margin: 10px auto;
 				padding:2px 0;
@@ -59,10 +47,6 @@
 
 			a:hover {
 				color: #e9f2fa;
-			}
-
-			.ireland a {
-				color: #0f0;
 			}
 
 			html {
@@ -124,7 +108,7 @@
 				font-size: 13px;
 			}
 
-			#rip {
+			#pasa {
 				font-size:32px
 			}
 
@@ -164,74 +148,49 @@
 </div>
 </div>
 
-<a id="rip" href="https://www.bbc.com/news/uk-61585886">lolololol</a>
+<a id="pasa" href="https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk">Çok Yaşa Mustafa Kemal Paşa!</a>
 </div>
 <script>
-			let date = new Date();
-
-			function playScotlandForeverOwO() {
-				try {
-					scotlandForever.play();
-
-				} catch(e) {
-					
-				}
-			}
-
-			let random = Math.random();
-
-			if (date.getMonth() === 2 && date.getDate() === 17) {
-
-				changeMascotButton.style.display = "none";
-				document.querySelector("html").classList.add("ireland");
-				document.querySelector("title").innerHTML = "e621 Ireland";
-				// mascot_artist.style.display = "none";
-
-			} else if (random < 0.01) {
-
-				scotlandForever = new Audio("scotland.m4a");
-
-				playScotlandForeverOwO();
-
-				window.scotlandForeverInterval = setInterval(playScotlandForeverOwO, 50);
-
-				changeMascotButton.style.display = "none";
-				document.querySelector("html").classList.add("scotland");
-				document.querySelector("title").innerHTML = "e621 Scotland";
-				// mascot_artist.style.display = "none";
-
-			} else if (random > 0.99) {
-				
-				changeMascotButton.style.display = "none";
-				document.querySelector("html").classList.add("wales");
-				document.querySelector("title").innerHTML = "e621 Cymru";
-
-				document.querySelector("h1 > a").innerHTML = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch";
-				document.querySelector("h1 > a").href = "https://en.wikipedia.org/wiki/Llanfairpwllgwyngyll";
-				// mascot_artist.style.display = "none";
-
-			} else {
-
+			{
 				function changeMascot() {
 					let images = [
-						"https://cdn.discordapp.com/attachments/823729576424243221/862835897984483358/angry-elizabeth-queen.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862835989600796702/royal-windsor-horse-show-berkshire-britain-10-may-2013-1024x683.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862836059267530772/712b2f3cb408e4a929ec469769640d4a--first-birthday-photos-funny-faces.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862836238842200065/98efb45413d678119431bec6ae2040fb.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862836411080900698/25-carbon-monoxide-photos-2.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862836577452163133/rainbowqueen-composite.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862845046449373214/unknown.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862845149989568512/unknown.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862845451904614420/46331b4c01f9f082b52a9e4c1ff729f6.png",
-						"https://cdn.discordapp.com/attachments/823729576424243221/862846127387967518/When-Harry-Forgets-Call-Her-Birthday.png",
-						"https://e621.co.uk/98b9386a850567dadbbf7de6dd9a9eb3.jpg"
+					"https://upload.wikimedia.org/wikipedia/commons/b/b7/Mustafa_Kemal_Ataturk.png",
+       				"https://i4.hurimg.com/i/hurriyet/75/1110x740/5dc453677152d800c88b12d0.jpg",
+      				"https://i2.cnnturk.com/i/cnnturk/75/1200x0/5dc79a3f2af1070e58761930.jpg",
+      			 	"https://isteataturk.com/gorseller/1606043805_ataturk.jpg",
+     			    "https://fotogaleri.star.com.tr/fotogaleri/act/2021/11/10/1011202116365429914dfd6258.jpg",
+      			    "https://icdn.ensonhaber.com/resimler/galeri/20191109_2_39226309_49283794_Web.jpg",
+					"https://i2.milimaj.com/i/milliyet/75/750x0/618b5ff986b2472aec1c53f3.jpg",
+					"https://4.bp.blogspot.com/-nyU2GgP1CCo/WTZero-Wm-I/AAAAAAAAK2k/Z0qRoAWq5x4eyeUyb8Ha8mF09JaevrBeACLcB/s1600/Mustafa_Kemal_Ataturk_01.jpg",
+					"https://antalyacityzone.com/images/galleries/mustafa-kemal-ataturkun-az-bilinen-fotograflari/fdw-eszxoaiqzwg1636482252.jpeg",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/Atat%C3%BCrk-ve-T%C3%BCrk-Olmak-HD-Y%C3%BCksek-Kalite-Atat%C3%BCrk-foto%C4%9Fraflar%C4%B1.jpg?ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2018/01/29-Ekim-1931-Atat%C3%BCrk-1.jpg?resize=1024%2C724&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2018/07/Atat%C3%BCrk-f%C3%B6tr-%C5%9Fapkas%C4%B1yla-Ankara-yolunda-bir-mola-esnas%C4%B1nda.jpg?resize=768%2C1104&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/10/Atat%C3%BCrk-Savarona-Yat%C4%B1-mustafakemalim-5.jpeg?w=613&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/10/Atat%C3%BCrk-Savarona-Yat%C4%B1-mustafakemalim-7.jpeg?w=1459&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/10/Atat%C3%BCrk-Savarona-Yat%C4%B1-mustafakemalim-2.jpeg?w=960&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/21367037_276025572901151_5655618861408133592_o.jpg?resize=800%2C445&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/6941436515_78e27eb1d3_b.jpg?w=621&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/21457394_277443822759326_3648675660605476981_o1.jpg?w=414&h=625&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/21457961_277443236092718_6766605390136575745_o1.jpg?w=198&h=298&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/21414923_277445042759204_6542063446708158308_o1.jpg?w=425&h=513&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/Atat%C3%BCrk-Afyonda-trenin-penceresinde..jpg?resize=908%2C1024&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/09/Atat%C3%BCrk-ve-As%C4%B1m-G%C3%BCnd%C3%BCz-Pa%C5%9Fa-Afyonkarahisarda.jpg?w=1327&ssl=1",
+					"https://i0.wp.com/mustafakemalim.com/wp-content/uploads/2017/10/PicsArt_1439635607010.jpg?fit=3840%2C1834",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_ca1b915aa406842ff79888eccd38ab4e.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_b8ac1c78c01268b3e247da405b2d2367.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_051454145e5a046d007f969dd0b348af.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_68632caac38ea9de3577e4137764c467.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_7b84ee20befc438eccec7968981e652e.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_2e9b547a7d59033d83a8448c17834f1c.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_30c7114e41d66f2944321769015bed7c.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_280be5bcb630b44648095f44f560d0fc.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_164a44c0c487387d4c442981c32e47e6.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_9cfc1f8e62c81397c940f13ad86bc4cb.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_a97d4322e4c3fabd13b827e43c71d9a5.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_28d15606efd617e2fccad19d3c596a37.jpg",
+					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_d3aa8372698f43eb30aa3c070e371c85.jpg"
 					];
-
-					mascot.src = images[Math.floor(images.length * Math.random())];
-
-					if (date.getMonth() === 11 && date.getDate() === 25) {
-						mascot.src = "https://cdn.discordapp.com/attachments/823729576424243221/862837223287816212/p07yxk21.png";
-					}
 				}
 
 				changeMascotButton.onclick = changeMascot;
