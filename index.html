@@ -25,7 +25,7 @@
 				margin: 10px auto;
 				padding:2px 0;
 				text-align: center;
-				width:480px;
+				width:460px;
 				max-width: 98vw;
 				position: absolute;
 				border-radius: 5px;
@@ -109,7 +109,7 @@
 			}
 
 			#pasa {
-				font-size:32px
+				font-size:30px
 			}
 
 			.credits {
@@ -147,15 +147,16 @@
 </form>
 </div>
 </div>
-
 <a id="pasa" href="https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk">Çok Yaşa Mustafa Kemal Paşa!</a>
 </div>
 <script>
-		let random = Math.random();
-		if (date.getMonth() === 2 && date.getDate() === 17) {
-		} else {
-			function changeMascot() {
-				let images = [
+			let date = new Date();
+			let random = Math.random();
+			if (date.getMonth() === 2 && date.getDate() === 17) {
+				changeMascotButton.style.display = "none";
+			} else {
+				function changeMascot() {
+					let images = [
 					"https://upload.wikimedia.org/wikipedia/commons/b/b7/Mustafa_Kemal_Ataturk.png",
        				"https://i4.hurimg.com/i/hurriyet/75/1110x740/5dc453677152d800c88b12d0.jpg",
       				"https://i2.cnnturk.com/i/cnnturk/75/1200x0/5dc79a3f2af1070e58761930.jpg",
@@ -192,12 +193,12 @@
 					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_a97d4322e4c3fabd13b827e43c71d9a5.jpg",
 					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_28d15606efd617e2fccad19d3c596a37.jpg",
 					"https://cdnuploads.aa.com.tr/uploads/PhotoGallery/2017/11/09/thumbs_b2_d3aa8372698f43eb30aa3c070e371c85.jpg"
-				];
+					];
+					mascot.src = images[Math.floor(images.length * Math.random())];
+				}
+				changeMascotButton.onclick = changeMascot;
+				changeMascot();
 			}
-
-			changeMascotButton.onclick = changeMascot;
-			changeMascot();
-		}
 		</script>
 <span class="credits">Not owned or operated by e621.net.</span>
 </body>
