@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>e621 TR</title>
+<link rel="icon" type="image/png" href="favicone621.png">
+<style>
+			.background {
+				/* background-image: url(uk.svg); */
+				background-color: #000;
+				position: absolute;
+				top: -30px;
+				right: -30px;
+				left: -30px;
+				bottom: -30px;
+				/* background-color:#555; */
+				background-size:cover;
+				background-position:center;
+				filter: blur(16px) brightness(80%);
+				position:fixed;
+				z-index:0;
+			}
+
+			.ireland .background {
+				background-image: url(ireland.svg);
+			}
+
+			.scotland .background {
+				background-image: url(scotland.svg);
+			}
+
+			.wales .background {
+				background-image: url(wales.svg);
+			}
+
+			.mascotbox {
+				margin: 10px auto;
+				padding:2px 0;
+				text-align: center;
+				width:480px;
+				max-width: 98vw;
+				position: absolute;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #000;
+				text-shadow: 0 0 2px black, 0 0 6px black;
+				z-index: 5;
+				background: rgba(0,0,0,0.1);
+				filter: grayscale(100%);
+			}
+
+			.credits {
+				text-shadow: 0 0 2px black, 0 0 6px black;
+			}
+
+			a {
+				text-decoration: none;
+				color: #b4c7d9
+			}
+
+			a:hover {
+				color: #e9f2fa;
+			}
+
+			.ireland a {
+				color: #0f0;
+			}
+
+			html {
+				font-family: Verdana, Arial, sans-serif;
+				text-align: center;
+				color: #fff;
+			}
+
+			h1 {
+				font-size: 4em;
+				text-align: center;
+
+			    margin-block-start: 0.2em;
+				margin-block-end: 0.2em;
+			}
+
+			#links {
+				margin-bottom: 8px;
+			}
+
+			#links > a {
+				font-size:  13.6px
+			}
+
+			input {
+    			vertical-align: middle;
+    			left: 50%;
+			}
+
+			input[type="text"] {
+				margin-bottom: 6px;
+			}
+
+			input[type="submit"],input[type="button"] {
+				margin-bottom: 6px;
+			}
+
+			.sadasdas {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			h1 > a {
+				text-decoration: none;
+				font-size: 54.4px;
+			}
+
+			img {
+				max-width: 100%;
+			}
+
+			#mascot_artist {
+				font-size: 13px;
+			}
+
+			#rip {
+				font-size:32px
+			}
+
+			.credits {
+				position: absolute;
+				bottom: 0;
+				text-align: center;
+				font-size: 11px;
+				padding-bottom: 5px;
+			}
+		</style>
+</head>
+<body>
+<div class="background"></div>
+<div class="sadasdas">
+<div id="searchbox" class="mascotbox">
+<img id="mascot">
+<div id="static-index">
+<h1><a href="/">e621</a></h1>
+<div id="links">
+<a href="https://e621.net/session/new">Login/Signup</a>
+<a href="https://e621.net/posts">Posts</a>
+<a href="https://e621.net/comments">Comments</a>
+<a href="https://e621.net/tags">Tags</a>
+<a href="https://e621.net/wiki_pages">Wiki</a>
+<a href="https://e621.net/forum_topics">Forum</a>
+<a href="https://e621.net/static/site_map">»</a>
+</div>
+<div>
+<form action="https://e621.net/posts" accept-charset="UTF-8">
+<div>
+<input type="text" name="tags" value="" autofocus="autofocus" autocomplete="off"><br>
+<input type="submit" value="Search">
+<input type="button" value="Change Mascot" id="changeMascotButton">
+</div>
+</form>
+</div>
+</div>
+
+<a id="rip" href="https://www.bbc.com/news/uk-61585886">RIP Queen Elizabeth II (1926-2022)</a>
+</div>
+<script>
+			let date = new Date();
+
+			function playScotlandForeverOwO() {
+				try {
+					scotlandForever.play();
+
+				} catch(e) {
+					
+				}
+			}
+
+			let random = Math.random();
+
+			if (date.getMonth() === 2 && date.getDate() === 17) {
+
+				changeMascotButton.style.display = "none";
+				document.querySelector("html").classList.add("ireland");
+				document.querySelector("title").innerHTML = "e621 Ireland";
+				// mascot_artist.style.display = "none";
+
+			} else if (random < 0.01) {
+
+				scotlandForever = new Audio("scotland.m4a");
+
+				playScotlandForeverOwO();
+
+				window.scotlandForeverInterval = setInterval(playScotlandForeverOwO, 50);
+
+				changeMascotButton.style.display = "none";
+				document.querySelector("html").classList.add("scotland");
+				document.querySelector("title").innerHTML = "e621 Scotland";
+				// mascot_artist.style.display = "none";
+
+			} else if (random > 0.99) {
+				
+				changeMascotButton.style.display = "none";
+				document.querySelector("html").classList.add("wales");
+				document.querySelector("title").innerHTML = "e621 Cymru";
+
+				document.querySelector("h1 > a").innerHTML = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch";
+				document.querySelector("h1 > a").href = "https://en.wikipedia.org/wiki/Llanfairpwllgwyngyll";
+				// mascot_artist.style.display = "none";
+
+			} else {
+
+				function changeMascot() {
+					let images = [
+						"https://cdn.discordapp.com/attachments/823729576424243221/862835897984483358/angry-elizabeth-queen.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862835989600796702/royal-windsor-horse-show-berkshire-britain-10-may-2013-1024x683.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862836059267530772/712b2f3cb408e4a929ec469769640d4a--first-birthday-photos-funny-faces.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862836238842200065/98efb45413d678119431bec6ae2040fb.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862836411080900698/25-carbon-monoxide-photos-2.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862836577452163133/rainbowqueen-composite.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862845046449373214/unknown.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862845149989568512/unknown.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862845451904614420/46331b4c01f9f082b52a9e4c1ff729f6.png",
+						"https://cdn.discordapp.com/attachments/823729576424243221/862846127387967518/When-Harry-Forgets-Call-Her-Birthday.png",
+						"https://e621.co.uk/98b9386a850567dadbbf7de6dd9a9eb3.jpg"
+					];
+
+					mascot.src = images[Math.floor(images.length * Math.random())];
+
+					if (date.getMonth() === 11 && date.getDate() === 25) {
+						mascot.src = "https://cdn.discordapp.com/attachments/823729576424243221/862837223287816212/p07yxk21.png";
+					}
+				}
+
+				changeMascotButton.onclick = changeMascot;
+				changeMascot();
+			}
+		</script>
+<span class="credits">Not owned or operated by e621.net.</span>
+</body>
+</html>
